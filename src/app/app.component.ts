@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Helloworld';
+  
+  changeColor(hello){
+  	console.log('%c----','background:lime',hello);
+  	console.log('%c----','background:lime',hello.value);
+  	hello.style.background = hello.value;
+  }
 }

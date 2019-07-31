@@ -1,0 +1,4 @@
+<div (click)="selectUser()">
+	<h2 *ngIf="isShown">{{user?.name}}</h2>
+	<button (click)="isShown=!isShown">Click</button>
+</div>
