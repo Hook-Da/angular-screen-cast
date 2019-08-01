@@ -1,2 +1,21 @@
-<div appColory>Some text here</div>
-<h1 appColory>Hook smash!!!</h1>
+<div *ngFor="let i of [1,2,3,4,5,6]">
+  <div *appDelay="i">Some text Hook smash</div>
+</div>
+<!-- Как это работает под копотом ангуляра
+    <div *appDelay="i">Some text Hook smash</div>
+    Внутри ангуляр увидел такую разметку и делает следующее
+    Он обрамляет все в ng-template
+    <ng-template [appDelay]="delay"></ng-template>
+    И на сам ng-template он уже ставит простую аттрибут директиву 
+    по этому имени.
+    Это абсолютно идентичные записи 
+
+      <div *appDelay="i"></div> === <ng-template [appDelay]="delay"></ng-template>
+
+    И теперь из этой записи у нас видно откуда появляется template 
+    в файле delay.directive.ts
+    template - это содержимое ng-template
+    
+    В то время как view-container является самим ng-template-ом
+ -->
+  <ng-template [appDelay]="delay"></ng-template>
