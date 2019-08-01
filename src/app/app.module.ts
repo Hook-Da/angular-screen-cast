@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { UserCardComponent } from './header/user-card/user-card.component';
 import { ItemComponent } from './item/item.component';
+import { ColoryDirective } from './colory.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserCardComponent,
-    ItemComponent
+    ItemComponent,
+    ColoryDirective
   ],
   imports: [
     BrowserModule,
